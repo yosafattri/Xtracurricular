@@ -10,8 +10,7 @@
             <tree string="Role in Extracurriculars">
                 <field name="id"/>
                 <field name="role_name"/>
-                <field name="parent_role"/>
-                <field name="responsibilities"/>       
+                <field name="parent_role"/>     
             </tree>
         </field>
     </record>
@@ -23,9 +22,10 @@
         <field name="name">xtracurricular.role.form</field>
         <field name="model">xtracurricular.role</field>
         <field name="arch" type="xml">
-            <form string="Kursus Form">
+            <form string="Role Form">
                 <sheet>
                     <group>
+                        <field name="id"/>
                         <field name="role_name"/>
                         <field name="parent_role"/>
                     </group>
