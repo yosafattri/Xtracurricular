@@ -20,3 +20,10 @@ class Xtracurricular(models.Model):
  
     name = fields.Char(string="Nama", required=True)
     description = fields.Text()
+
+class Role(models.Model):
+    _name = 'xtracurricular.role'
+ 
+    role_name = fields.Char(string="Role Name", required=True)
+    parent_role = fields.Char(string="Parent Role", required=False)
+    responsibilities = fields.Text()

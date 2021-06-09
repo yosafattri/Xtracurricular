@@ -1,0 +1,67 @@
+<odoo>
+
+    <data>
+    <!-- roles -->
+
+    <record model="ir.ui.view" id="roles_tree_view">
+        <field name="name">xtracurricular.role.tree</field>
+        <field name="model">xtracurricular.role</field>
+        <field name="arch" type="xml">
+            <tree string="Role in Extracurriculars">
+                <field name="id"/>
+                <field name="role_name"/>
+                <field name="parent_role"/>
+                <field name="responsibilities"/>       
+            </tree>
+        </field>
+    </record>
+     
+     
+    <!-- ### Membuat Tampilan Form Roles ### -->
+     
+    <record model="ir.ui.view" id="roles_form_view">
+        <field name="name">xtracurricular.role.form</field>
+        <field name="model">xtracurricular.role</field>
+        <field name="arch" type="xml">
+            <form string="Kursus Form">
+                <sheet>
+                    <group>
+                        <field name="role_name"/>
+                        <field name="parent_role"/>
+                    </group>
+                    <separator string="Responsibilites">
+                    </separator>
+                    <group>
+                        <field name="responsibilities"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+     
+     
+    <!-- ### Membuat Action/Event Object Roles ### -->
+     
+    <record model="ir.actions.act_window" id="roles_list_action">
+        <field name="name">Role in Extracurriculars</field>
+        <field name="res_model">xtracurricular.role</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Add new Roles in Extracurriculars</p>
+        </field>
+    </record>
+    </data>
+
+    <menuitem id="role_menu" name="Roles" parent="training_odoo_menu" action="roles_list_action"/>
+
+    <!-- ### Membuat menu title baru ### -->
+     
+    <!-- <menuitem id="role_menu" name="Role" parent="main_training_odoo_menu"/> -->
+ 
+    <!-- ### Membuat Sub Menu Kontak ### -->
+             
+    <!-- <menuitem id="role_xtra_menu" name="Role in Extracurriculars" parent="role_menu" action="roles_list_action"/> -->
+    
+
+</odoo>
