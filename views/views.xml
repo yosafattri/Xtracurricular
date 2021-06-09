@@ -1,0 +1,125 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="xtracurricular.list">
+      <field name="name">xtracurricular list</field>
+      <field name="model">xtracurricular.xtracurricular</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="xtracurricular.action_window">
+      <field name="name">xtracurricular window</field>
+      <field name="res_model">xtracurricular.xtracurricular</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="xtracurricular.action_server">
+      <field name="name">xtracurricular server</field>
+      <field name="model_id" ref="model_xtracurricular_xtracurricular"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="xtracurricular" id="xtracurricular.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="xtracurricular.menu_1" parent="xtracurricular.menu_root"/>
+    <menuitem name="Menu 2" id="xtracurricular.menu_2" parent="xtracurricular.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="xtracurricular.menu_1_list" parent="xtracurricular.menu_1"
+              action="xtracurricular.action_window"/>
+    <menuitem name="Server to list" id="xtracurricular" parent="xtracurricular.menu_2"
+              action="xtracurricular.action_server"/>
+    -->
+
+     <!-- ### Membuat Tampilan Tree/List ### -->
+     
+    <record model="ir.ui.view" id="kursus_tree_view">
+        <field name="name">xtracurricular.xtracurricular.tree</field>
+        <field name="model">xtracurricular.xtracurricular</field>
+        <field name="arch" type="xml">
+            <tree string="Kursus List">
+                <field name="name"/>
+                <field name="description"/>       
+            </tree>
+        </field>
+    </record>
+     
+     
+    <!-- ### Membuat Tampilan Form ### -->
+     
+    <record model="ir.ui.view" id="kursus_form_view">
+        <field name="name">xtracurricular.xtracurricular.form</field>
+        <field name="model">xtracurricular.xtracurricular</field>
+        <field name="arch" type="xml">
+            <form string="Kursus Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <notebook>
+                        <page string="Keterangan">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+     
+     
+    <!-- ### Membuat Action/Event Object Kursus ### -->
+     
+    <record model="ir.actions.act_window" id="kursus_list_action">
+        <field name="name">Xtracurricular</field>
+        <field name="res_model">xtracurricular.xtracurricular</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">COK</p>
+        </field>
+    </record>
+     
+     
+    <!-- ### Membuat Menu Bar ### -->
+     
+    <menuitem id="main_training_odoo_menu" name="Xtracurricular"/>
+     
+         
+    <!-- ### Membuat Menu Title ### -->
+     
+    <menuitem id="training_odoo_menu" name="Xtracurricular" parent="main_training_odoo_menu"/>
+     
+     
+    <!-- ### Membuat Sub Menu ### -->
+     
+    <menuitem id="kursus_menu" name="Xtracurricular" parent="training_odoo_menu" action="kursus_list_action"/>
+         
+ 
+  </data>
+</odoo>
