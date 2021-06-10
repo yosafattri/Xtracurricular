@@ -1,17 +1,6 @@
 <odoo>
 
     <data>
-        <!-- <record model="ir.ui.view" id="member_tree_view">
-        <field name="name">xtracurricular.member.tree</field>
-        <field name="model">res.partner</field>
-        <field name="arch" type="xml">
-            <tree string="Member List">
-                <field name="extracurricular_id"/>       
-                <field name="role_id"/>            
-            </tree>
-        </field>
-    </record> -->
-     
     <record model="ir.ui.view" id="member_form_view">
         <field name="name">xtracurricular.member.form</field>
         <field name="model">res.partner</field>
