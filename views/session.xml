@@ -1,0 +1,46 @@
+<odoo>
+
+    <data>
+        <record model="ir.ui.view" id="session_tree_view">
+        <field name="name">xtracurricular.session.tree</field>
+        <field name="model">xtracurricular.session</field>
+        <field name="arch" type="xml">
+            <tree string="Session List">
+                <field name="name"/>
+                <field name="duration"/>       
+                <field name="start" widget="float_time"/>       
+                <field name="end" widget="float_time"/>       
+            </tree>
+        </field>
+    </record>
+     
+    <record model="ir.ui.view" id="session_form_view">
+        <field name="name">xtracurricular.session.form</field>
+        <field name="model">xtracurricular.session</field>
+        <field name="arch" type="xml">
+            <form string="Session Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="duration"/>
+                        <field name="start" widget="float_time"/>
+                        <field name="end" widget="float_time"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+     
+    <record model="ir.actions.act_window" id="session_list_action">
+        <field name="name">Session</field>
+        <field name="res_model">xtracurricular.session</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem id="configuration_menu" name="Configuration" parent="main_training_odoo_menu"/>
+    <menuitem id="session_menu" name="Session" parent="configuration_menu" action="session_list_action"/>
+    </data>
+    
+
+</odoo>
