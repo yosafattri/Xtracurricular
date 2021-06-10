@@ -1,0 +1,42 @@
+<odoo>
+
+    <data>
+        <!-- <record model="ir.ui.view" id="member_tree_view">
+        <field name="name">xtracurricular.member.tree</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Member List">
+                <field name="extracurricular_id"/>       
+                <field name="role_id"/>            
+            </tree>
+        </field>
+    </record> -->
+     
+    <record model="ir.ui.view" id="member_form_view">
+        <field name="name">xtracurricular.member.form</field>
+        <field name="model">res.partner</field>
+	    <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Member">
+                    <group>
+                        <field name="extracurricular_id"/>
+                        <field name="role_id"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+     
+    <record model="ir.actions.act_window" id="member_list_action">
+        <field name="name">Member</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="member_menu" name="Member" parent="configuration_menu" action="member_list_action"/>
+    </data>
+    
+
+</odoo>

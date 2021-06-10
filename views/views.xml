@@ -29,6 +29,38 @@
                         <page string="Keterangan">
                             <field name="description"/>
                         </page>
+                        <page string="Session">
+                            <field name="session_id">
+                                <tree string="Daftar Sesi">
+                                    <field name="name"/>
+                                    <field name="duration"/>
+                                    <field name="start"/>
+                                    <field name="end"/>
+                                </tree>
+                                <form>
+                                    <group string="Tambah Sesi">
+                                        <field name="name"/>
+                                        <field name="duration"/>
+                                        <field name="start"/>
+                                        <field name="end"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Member">
+                            <field name="member_id">
+                                <tree string="Daftar Member">
+                                    <field name="name"/>
+                                    <field name="role_id"/>
+                                </tree>
+                                <form>
+                                    <group string="Tambah Member">
+                                        <field name="name"/>
+                                        <field name="role_id"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
