@@ -36,9 +36,6 @@
         <field name="res_model">xtracurricular.session</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Nyoi</p>
-        </field>
     </record>
     
     <menuitem id="configuration_menu" name="Configuration" parent="main_training_odoo_menu"/>
