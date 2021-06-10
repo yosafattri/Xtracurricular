@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/role.xml',
         'views/templates.xml',
+        'views/session.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
