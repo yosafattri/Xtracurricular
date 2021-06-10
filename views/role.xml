@@ -53,7 +53,9 @@
     </record>
     </data>
 
-    <menuitem id="role_menu" name="Roles" parent="training_odoo_menu" action="roles_list_action"/>
+    <menuitem id="roles_odoo_menu" name="Roles" parent="main_training_odoo_menu"/>
+
+    <menuitem id="role_menu" name="Roles" parent="roles_odoo_menu" action="roles_list_action"/>
 
     <!-- ### Membuat menu title baru ### -->
      
