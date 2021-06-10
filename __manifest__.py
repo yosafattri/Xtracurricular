@@ -27,6 +27,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/role.xml',
+        # 'views/extracurricular.xml',
         'views/templates.xml',
         'views/session.xml',
         'views/member.xml',

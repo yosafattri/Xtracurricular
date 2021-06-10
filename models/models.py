@@ -5,7 +5,9 @@ from odoo import models, fields, api
 class Xtracurricular(models.Model):
     _name = 'xtracurricular.xtracurricular'
  
-    name = fields.Char(string="Nama", required=True)
+    title = fields.Char(string="Title", required=True)
+    advisor = fields.Char(string="Advisor", required=True)
+    school_code = fields.Char(string="School Code", required=False)
     description = fields.Text()
     member_id = fields.Many2many('res.partner', string="Member")
     session_id = fields.Many2many('xtracurricular.session', string="Session")
