@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <tree string="Role in Extracurriculars">
                 <field name="id"/>
-                <field name="role_name"/>
+                <field name="name"/>
                 <field name="parent_role"/>     
             </tree>
         </field>
@@ -26,7 +26,7 @@
                 <sheet>
                     <group>
                         <field name="id"/>
-                        <field name="role_name"/>
+                        <field name="name"/>
                         <field name="parent_role"/>
                     </group>
                     <separator string="Responsibilites">

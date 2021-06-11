@@ -10,7 +10,7 @@
                 <page string="Member">
                     <group>
                         <field name="extracurricular_id"/>
-                        <field name="role_id"/>
+                        <field name="role_ids"/>
                     </group>
                 </page>
             </notebook>

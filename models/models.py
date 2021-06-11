@@ -15,7 +15,7 @@ class Xtracurricular(models.Model):
 class Role(models.Model):
     _name = 'xtracurricular.role'
  
-    role_name = fields.Char(string="Role Name", required=True)
+    name = fields.Char(string="Role Name", required=True)
     parent_role = fields.Char(string="Parent Role", required=False)
     member_id = fields.Many2many('res.partner', string="Member")
     responsibilities = fields.Text()
@@ -37,7 +37,6 @@ class Session(models.Model):
 
 class Partner(models.Model):
     _inherit = 'res.partner'
-    # _name = 'xtracurricular.member'
 
     extracurricular_id = fields.Many2many('xtracurricular.xtracurricular', string="Extracurricular")
-    role_id = fields.Many2many('xtracurricular.role', string="Role")
+    role_ids = fields.Many2many('xtracurricular.role', string="Role(s)")
