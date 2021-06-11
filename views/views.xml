@@ -54,12 +54,12 @@
                             <field name="member_id">
                                 <tree string="Daftar Member">
                                     <field name="name"/>
-                                    <field name="role_id"/>
+                                    <field name="role_ids" widget="many2many_tags"/>
                                 </tree>
                                 <form>
-                                    <group string="Tambah Member">
+                                    <group string="Roles(s)">
                                         <field name="name"/>
-                                        <field name="role_id"/>
+                                        <field name="role_ids"/>
                                     </group>
                                 </form>
                             </field>
