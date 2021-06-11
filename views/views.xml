@@ -7,9 +7,9 @@
         <field name="model">xtracurricular.xtracurricular</field>
         <field name="arch" type="xml">
             <tree string="Extracurricular List">
-                <field name="title"/>
-                <field name="advisor"/>
-                <field name="school_code"/>     
+                <field name="name"/>
+                <field name="advisor_id"/>   
+                <field name="school_code"/>
             </tree>
         </field>
     </record>
@@ -24,9 +24,9 @@
             <form string="Extracurricular Form">
                 <sheet>
                     <group>
-                        <field name="title"/>
-                        <field name="advisor"/>
-                        <field name="school_code"/>   
+                        <field name="name"/>
+                        <field name="advisor_id"/>
+                        <field name="school_code"/>
                     </group>
                     <notebook>
                         <page string="Description">
@@ -79,13 +79,13 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create a new quotation</p>
+            <p class="oe_view_nocontent_create">Create a new Xtracurricular</p>
         </field>
     </record>    
      
     <!-- ### Membuat Menu Bar ### -->
      
-    <menuitem id="main_training_odoo_menu" name="Xtracurricular"/>
+    <menuitem id="main_training_odoo_menu" name="Xtracurricular" web_icon="training_odoo,static/description/icon.png"/>
          
     <!-- ### Membuat Menu Title ### -->
      
