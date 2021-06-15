@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_xtracurricular_xtracurricular,xtracurricular.xtracurricular,model_xtracurricular_xtracurricular,,1,0,0,0
+access_xtracurricular_xtracurricular,xtracurricular.xtracurricular,model_xtracurricular_xtracurricular,,1,1,1,1
+access_xtracurricular_session,xtracurricular.session,model_xtracurricular_session,,1,1,1,1
+access_xtracurricular_role,xtracurricular.role,model_xtracurricular_role,,1,1,1,1
